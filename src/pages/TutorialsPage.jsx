@@ -15,7 +15,7 @@ function TutorialsPage() {
 
       <section className="container">
         <h2 className="page-title">أحدث المقالات والشروحات</h2>
-        <div className="grid"> {/* تم تغيير الفئة من tutorial-cards-grid إلى grid */}
+        <div className="grid"> 
           <div className="card">
             <h3 className="card-title">مقدمة في اختبار الاختراق</h3>
             <p className="card-content">
@@ -27,7 +27,7 @@ function TutorialsPage() {
           </div>
 
           <div className="card">
-            <h3 className="card-title">فهم ثغرات SQL Injection</h3> {/* تم تغيير العنوان */}
+            <h3 className="card-title">فهم ثغرات SQL Injection</h3>
             <p className="card-content">
               شرح مفصل لثغرات حقن SQL وكيفية استغلالها وطرق الحماية منها.
             </p>
