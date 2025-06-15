@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'; // لا نحتاجها هنا لأن الروابط خارجية
+// import { Link } from 'react-router-dom'; // الروابط من برا فا مانحتاجها حاليا 
 
 function AboutPage() {
   return (
