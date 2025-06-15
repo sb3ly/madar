@@ -24,7 +24,7 @@ const pageData = {
   header: {
     logoText: 'Madar',
     navLinks: [
-      { name: 'Home', path: '/madar', active: true },
+      { name: 'Home', path: '/', active: true },
       { name: 'Tutorials', path: '/tutorials' },
       { name: 'Tools', path: '/tools' },
       { name: 'who am i', path: '/about' },
@@ -51,7 +51,7 @@ const pageData = {
     socialLinks: [
       { href: 'https://x.com/sb3ly', icon: 'fab fa-twitter', label: 'Twitter' },
       { href: 'https://github.com/sb3ly', icon: 'fab fa-github', label: 'GitHub' },
-      { href: '#', icon: 'fab fa-linkedin-in', label: 'LinkedIn' }, // LinkedIn link was '#' in your original code
+      { href: '#', icon: 'fab fa-linkedin-in', label: 'LinkedIn' },
     ],
     copyright: '© 2025 Madar. جميع الحقوق محفوظة.',
   },
@@ -69,12 +69,12 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/madar">
       <div className="app-wrapper">
         <Header data={pageData.header} />
-        
+
         <Routes>
-          <Route path="/madar" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/tutorials" element={<TutorialsPage />} />
           <Route path="/tools" element={<ToolsPage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -87,7 +87,7 @@ function App() {
           <Route path="/tutorials/wifi-security" element={<WifiSecurityArticle />} />
 
           {/* مسار لصفحة 404 في حال عدم العثور على المسار */}
-          <Route path="*" element={<h1 style={{textAlign: 'center', margin: '50px', color: 'var(--primary-color)'}}>404 - الصفحة غير موجودة</h1>} />
+          <Route path="*" element={<h1 style={{ textAlign: 'center', margin: '50px', color: 'var(--primary-color)' }}>404 - الصفحة غير موجودة</h1>} />
         </Routes>
 
         <Footer data={pageData.footer} />
