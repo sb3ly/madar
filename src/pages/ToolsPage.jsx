@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // لجعل الروابط داخل React Router
+import { Link } from 'react-router-dom'; // يخلي الروابط داخل React Router
 
 function ToolsPage() {
   return (
