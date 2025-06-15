@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/madar/', // <--- تأكد أن هذا يطابق اسم مستودعك في GitHub
+  base: '/madar/', // المفروض ذا يكون اسم المستودع على حسب كلام gemini 
 });
