@@ -1,25 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// استيراد المكونات المشتركة
+// هاذا بيستورد القطع اللي بتخاوينا في كل صفحة 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WelcomeSection from './components/WelcomeSection';
 import WhyMadarSection from './components/WhyMadarSection';
 
-// استيراد مكونات الصفحات الرئيسية
+//اللي يقولو عليها برقر يستوور مكونات الصفحة الرئيسية
 import TutorialsPage from './pages/TutorialsPage';
 import ToolsPage from './pages/ToolsPage';
 import AboutPage from './pages/AboutPage';
 import NotesPage from './pages/NotesPage';
 
-// استيراد مكونات المقالات الفرعية
+//  يستورد مكونات المقالات راح تحدث هنا في كل مرا تضيف صفحة ياوحش هههههه
 import IntroPentestingArticle from './articles/IntroPentestingArticle';
 import MalwareHandlingArticle from './articles/MalwareHandlingArticle';
 import SqlInjectionArticle from './articles/SqlInjectionArticle';
 import WifiSecurityArticle from './articles/WifiSecurityArticle';
 
-// بيانات الموقع الثابتة (Mock Data)
+//  بيانات الموقع الثابتة (Mock Data) 
 const pageData = {
   header: {
     logoText: 'Madar',
@@ -36,7 +36,7 @@ const pageData = {
     highlight: 'Madar',
     description: 'Madar هو مشروع شخصي يهدف إلى إثراء المحتوى العربي في مجال الأمن السيبراني. هنا، أشارك خبراتي في <strong>اكتشاف الثغرات</strong>، أقدم <strong>شروحات عملية</strong>، <strong>أستعرض أدوات قوية</strong> لمساعدتك في رحلتك نحو عالم الاختراق الأخلاقي.',
     buttonText: 'ابدأ رحلتك معنا!',
-    buttonLink: '/tutorials', // الرابط يشير الآن إلى مسار React Router
+    buttonLink: '/tutorials', //  الرابط يشير الآن إلى مسار React Router قد زبطناها في نفس ذا الملف تحت 
   },
   whyMadar: {
     title: 'لماذا تختار ',
@@ -57,7 +57,7 @@ const pageData = {
   },
 };
 
-// مكون الصفحة الرئيسية الذي يجمع أقسام الترحيب ولماذا مدار
+// هاذا بيجمع بين قطعتين whymadara و welcome 
 function HomePage() {
   return (
     <main id="main-content-wrapper">
@@ -80,13 +80,13 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/notes" element={<NotesPage />} />
 
-          {/* مسارات المقالات الفرعية ضمن قسم الشروحات */}
+          {/* مسار الشروحات بتعدل هنا كل ماتضيف صقحة في الشروحات */}
           <Route path="/tutorials/intro-pentesting" element={<IntroPentestingArticle />} />
           <Route path="/tutorials/malware-handling" element={<MalwareHandlingArticle />} />
           <Route path="/tutorials/sql-injection" element={<SqlInjectionArticle />} />
           <Route path="/tutorials/wifi-security" element={<WifiSecurityArticle />} />
 
-          {/* مسار لصفحة 404 في حال عدم العثور على المسار */}
+          {/* الشي اللي بيطلع لو المسار غلط  */}
           <Route path="*" element={<h1 style={{ textAlign: 'center', margin: '50px', color: 'var(--primary-color)' }}>404 - الصفحة غير موجودة</h1>} />
         </Routes>
 
