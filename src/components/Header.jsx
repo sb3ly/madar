@@ -10,7 +10,7 @@ function Header({ data }) {
 
   return (
     <header className="main-header">
-      <Link to="/" className="site-logo">
+      <Link to="/madar" className="site-logo">
         M<span className="red">a</span>dar
       </Link>
       <nav className={`main-nav ${isNavOpen ? 'active' : ''}`} id="main-nav">
