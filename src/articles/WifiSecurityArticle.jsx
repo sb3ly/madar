@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'; // إذا كان هناك روابط داخلية في المستقبل
+// import { Link } from 'react-router-dom'; // نعيد ونكرر لو فيه روابط خارجيه نشغلها
 
 function WifiSecurityArticle() {
   return (
