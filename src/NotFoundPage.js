@@ -21,7 +21,7 @@ const NotFoundPage = () => {
     }}>
       {/* الصورة المعروضة لخطأ 404. تأكد من أن المسار '/your-gif-image.gif' صحيح ويشير إلى صورة الـ GIF الخاصة بك في مجلد public */}
       <img
-        src="/public/img/GOKU_BLACKHOLE.gif"
+        src="https://sb3ly.github.io/madar/img/GOKU_BLACKHOLE.gif"
         alt="404 - الصفحة غير موجودة"
         style={{
           maxWidth: '80%', // لجعل الصورة تستجيب للعرض
